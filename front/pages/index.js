@@ -1,14 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
-import {Button} from 'antd'
-
+// import {Button} from 'antd'
+import ShopLayout from '../layouts/ShopLayout'
+import { Button } from 'react-bootstrap';
 function index() {
   return (
-    <div>
-    <Link href="dd">s</Link>
-    dong
-    <Button>asd</Button>
-    </div>
+    <ShopLayout>
+      동영아이
+      <Button>asd</Button>
+    </ShopLayout>
   )
 }
 

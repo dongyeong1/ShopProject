@@ -7,6 +7,7 @@ import {Input} from 'antd'
 export const InputSearch=styled(Input)`
 border-radius: 25px;
 width:350px;
+border:none;
 margin-left:150px;
 height:35px;
 background-color:lightgray

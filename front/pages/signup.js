@@ -28,12 +28,14 @@ font-weight: bold;
     const [signUpError, setSignUpError] = useState('');
     const [signUpSuccess, setSignUpSuccess] = useState(false);
 
-    const onChangePassword=useCallback((e)=>{
+    const onChangePassword=(e)=>{
         console.log(e.target.value)
         setPassword(e.target.value)
         if(e.target.value===''){
             setPasswordInputStart(false)        }
-    },[])
+    }
+
+   
 
     const onChangePasswordCheck=useCallback((e)=>{
         setPasswordInputStart(true)
@@ -54,6 +56,7 @@ font-weight: bold;
 
     const onSubmit=useCallback((e)=>{
         console.log('asasa')
+        
             e.preventDefault()
             axios.post('http://localhost:3065/user/signUp',{
                 email,
@@ -72,19 +75,19 @@ font-weight: bold;
     <form onSubmit={onSubmit}>
       <label for="email">이메일 주소</label>
       <div>
-        <Input type="email" id="email" name="email" value={email} onChange={onChangeEmail} />
+        <input type="email" id="email" name="email" value={email} onChange={onChangeEmail} />
       </div>
 
     
       <span>닉네임</span>
       <div>
-        <Input type="text" id="nickname" name="nickname" value={nickname} onChange={onChangeNickname} />
+        <input type="text" id="nickname" name="nickname" value={nickname} onChange={onChangeNickname} />
       </div>
     
    
       <span>비밀번호</span>
       <div>
-        <Input type="password" id="password" name="password" value={password} onChange={onChangePassword} />
+        <input type="password" id="password" name="password" value={password} onChange={onChangePassword} />
       </div>
     
     
